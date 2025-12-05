@@ -39,11 +39,11 @@ author:
   name   : "Andile Boussari"
   avatar : "/assets/images/bio-photo.jpg"
   bio: >
-    <ul>
-      <li>Administrateur systèmes & réseaux</li>
-      <li>Cybersécurité</li>
-      <li>Passionné de veille technologique & labs</li>
-    </ul>
+  <ul>
+    <li>Administrateur systèmes & réseaux</li>
+    <li>Cybersécurité</li>
+    <li>Passionné de veille technologique & labs</li>
+  </ul>
 
   links:
     - label: "GitHub"
