@@ -38,7 +38,9 @@ plugins:
 author:
   name   : "Andile Boussari"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Administrateur systèmes & réseaux | Cybersécurité | Passionné de labs techniques."
+  bio: >
+    Administrateur systèmes & réseaux  
+    Cybersécurité • Passionné de veille technologique
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
