@@ -1,0 +1,116 @@
+---
+layout: single
+title: "Lab Réseau – VLAN 10 & VLAN 20 sur Switch Cisco"
+description: "Mise en place de VLANs, segmentation réseau et vérifications sur un switch Cisco."
+categories: [Réseaux]
+tags: [Cisco, VLAN, Switching, Formation]
+author_profile: true
+---
+
+## 🧪 Environnement du Lab
+
+Ce lab a été réalisé sur **EVE-NG Community Edition**, un émulateur réseau permettant de déployer des topologies Cisco.  
+L’infrastructure utilisée :
+
+- Plateforme : **EVE-NG**
+- Images : **Switch Cisco IOL / vIOS**
+- Endpoints : **VPC (Virtual PC) intégrés à EVE-NG**
+- Connexions : liens Ethernet standards (eth0 → Gi0/x)
+
+Ce choix permet de reproduire fidèlement un environnement réseau Cisco tout en restant gratuit et flexible.
+
+---
+
+## 🎯 Objectif du Lab 
+
+Ce lab a pour but de :
+
+- Créer deux VLANs : **VLAN 10 (RH)** et **VLAN 20 (IT)**
+- Assigner les PC aux bons VLANs
+- Configurer les adresses IP des VPCs
+- Vérifier la segmentation à l’aide des commandes Cisco
+
+Il s'agit d’un exercice fondamental pour comprendre la logique de **segmentation réseau**.
+
+---
+
+## 🖥️ Topologie
+![Architecture Lab](image.png)
+| PC  | VLAN | Adresse IP  |
+|-----|------|--------------|
+| PC1 | 10   | 10.0.0.10/24 |
+| PC2 | 10   | 10.0.0.20/24 |
+| PC3 | 20   | 10.0.0.30/24 |
+| PC4 | 20   | 10.0.0.40/24 |
+
+Le switch SW1 connecte l’ensemble des postes via 4 interfaces GigabitEthernet.
+
+---
+
+## ⚙️ Configuration du Switch Cisco
+
+###  Création des VLANs
+SW1(config)# vlan 10
+SW1(config-vlan)# name RH
+SW1(config-vlan)# exit
+
+SW1(config)# vlan 20
+SW1(config-vlan)# name IT
+SW1(config-vlan)# exit
+
+###  Attribution des ports aux VLANs
+VLAN 10 (PC1 et PC2)
+SW1(config)# interface range gi0/0 - 0/1
+SW1(config-if-range)# switchport access vlan 10
+SW1(config-if-range)# exit
+
+VLAN 20 (PC3 et PC4)
+SW1(config)# interface range gi0/2 - 0/3
+SW1(config-if-range)# switchport access vlan 20
+SW1(config-if-range)# exit
+
+### 🖥️ Configuration IP des VPCs
+PC1
+ip 10.0.0.10/24
+
+PC2
+ip 10.0.0.20/24
+
+PC3
+ip 10.0.0.30/24
+
+PC4
+ip 10.0.0.40/24
+
+### 🔍 Commandes de Vérification
+
+🔍 Voir les VLANs configurés :
+
+show vlan brief
+
+🔍 Voir les adresses MAC associées à un VLAN :
+
+show mac address-table vlan 10
+show mac address-table vlan 20
+
+🔍 Vérifier le mode des interfaces :
+
+show interfaces switchport
+
+🔍 Vérifier l’état des ports :
+
+show interfaces status
+
+
+## 📝Conclusion – L’intérêt essentiel des VLAN
+
+Les VLAN permettent de segmenter un réseau en plusieurs domaines logiques indépendants, sans modifier le câblage physique.
+Ils apportent trois bénéfices majeurs :
+
+- Sécurité : isolation des flux, réduction des risques internes.
+
+- Performance : réduction du broadcast, meilleure efficacité du réseau.
+
+- Organisation : séparation logique par services (IT, RH, Finance…).
+
+Les VLAN sont donc un pilier de la structure réseau en entreprise, indispensables avant toute architecture avancée (routage inter-VLAN, QoS, sécurité, etc.).
