@@ -2,9 +2,10 @@
 layout: single
 title: "Lab Réseau – VLAN 10 & VLAN 20 sur Switch Cisco"
 description: "Mise en place de VLANs, segmentation réseau et vérifications sur un switch Cisco."
-categories: [Réseaux]
+categories: [reseaux]
 tags: [Cisco, VLAN, Switching, Formation]
 author_profile: true
+permalink:  /labs-reseaux/vlan/
 ---
 
 ## 🧪 Environnement du Lab
@@ -35,7 +36,7 @@ Il s'agit d’un exercice fondamental pour comprendre la logique de **segmentati
 ---
 
 ## 🖥️ Topologie
-![Architecture Lab](image.png)
+![Topologie du Lab VLAN](/assets/images/reseaux/vlan.png)
 | PC  | VLAN | Adresse IP  |
 |-----|------|--------------|
 | PC1 | 10   | 10.0.0.10/24 |
