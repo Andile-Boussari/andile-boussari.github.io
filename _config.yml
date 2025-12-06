@@ -1,4 +1,6 @@
-# Site settings
+# =========================
+# Paramètres du site
+# =========================
 title: "Ingénieur Systèmes & Réseaux Junior | Windows Server | Azure AD / Intune | Supervision & Sécurité"
 email: andileboussari@gmail.com
 description: >-
@@ -9,42 +11,41 @@ github_username: andile-boussari
 minimal_mistakes_skin: default
 search: true
 
-# Adresse de ton site GitHub Pages
+# Adresse du site
 url: "https://andile-boussari.github.io"
-baseurl: ""
+baseurl: ""   # IMPORTANT : vide, comme ici
 
-# Build settings
+# Build
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes"
 
-# Outputting
+# Sortie des URLs
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone:
 
+# On évite la pagination pour l’instant
+# paginate: 5
+# paginate_path: /page:num/
+
+# Fuseau horaire
+timezone: Europe/Paris
+
+# On inclut les pages perso
 include:
   - _pages
 
-# Plugins (previously gems:)
+# Plugins supportés par GitHub Pages (sécurisé)
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
+  - jekyll-gist
   - jemoji
-  - jekyll-include-cache
 
+# Auteur
 author:
   name   : "Andile Boussari"
   avatar : "/assets/images/bio-photo.jpg"
   bio: >
-<ul>
-  <li>Administrateur systèmes & réseaux</li>
-  <li>Cybersécurité</li>
-  <li>Passionné de veille technologique & labs</li>
-</ul>
-
+    Administrateur systèmes & réseaux | Cybersécurité | Passionné de labs & veille technologique.
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -68,8 +69,9 @@ footer:
       icon: "fas fa-fw fa-envelope"
       url: "mailto:andileboussari@gmail.com"
 
+# Valeurs par défaut
 defaults:
-  # _posts
+  # Articles (_posts)
   - scope:
       path: ""
       type: posts
@@ -77,10 +79,11 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
+      comments: false
+      share: false
+      related: false
+
+  # Pages (_pages)
   - scope:
       path: "_pages"
       type: pages
