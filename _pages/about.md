@@ -1,8 +1,22 @@
 ---
 permalink: /about/
-title: "About"
+title: "À propos"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Administrateur **Systèmes & Réseaux**, avec un fort intérêt pour la **cybersécurité** et les environnements techniques orientés production.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Je m’intéresse particulièrement à :
+- la sécurité des réseaux internes
+- la segmentation et le contrôle des accès
+- la prévention des attaques courantes en entreprise
+- la veille technologique et l’expérimentation en lab
+
+Passionné par les labs pratiques, je privilégie une approche concrète : comprendre, tester, casser, corriger.  
+Chaque configuration est pensée pour répondre à des problématiques réelles du terrain.
+
+Mon objectif est de renforcer la **fiabilité, la sécurité et la résilience** des systèmes, tout en restant aligné avec les bonnes pratiques et les standards actuels.
+
+Ce site me permet de partager :
+- des labs techniques
+- des retours d’expérience
+- et une veille continue autour des systèmes, réseaux et de la cybersécurité.
