@@ -2,8 +2,11 @@ main:
   - title: "Accueil"
     url: /
 
-  - title: "Labs Réseaux"
-    url: /labs-reseaux/
+  - title: "Posts"
+    url: /posts/
+
+  - title: "Réseaux"
+    url: /reseaux/
 
   - title: "À propos"
     url: /about/

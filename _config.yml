@@ -1,15 +1,18 @@
 # =========================
 # Paramètres du site
 # =========================
-title: "Ingénieur Systèmes & Réseaux Junior | Windows Server | Azure AD / Intune | Supervision & Sécurité"
+title: "Andile Boussari"
 email: andileboussari@gmail.com
 description: >-
-  Portfolio professionnel d’Andile Boussari : labs techniques, projets en
+  Portfolio professionnel d'Andile Boussari : labs techniques, projets en
   administration systèmes & réseaux et cybersécurité.
 twitter_username: ""
 github_username: andile-boussari
-minimal_mistakes_skin: default
+minimal_mistakes_skin: 'air'
 search: true
+
+# Langue du site
+lang: "fr"
 
 # Adresse du site
 url: "https://andile-boussari.github.io"
@@ -19,12 +22,17 @@ baseurl: ""   # IMPORTANT : vide, comme ici
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes"
 
+# ajout teaser
+teaser: true
+
+excerpt_separator: "<!--more-->"
+
 # Sortie des URLs
 permalink: /:categories/:title/
 
-# On évite la pagination pour l’instant
-# paginate: 5
-# paginate_path: /page:num/
+# Pagination pour les posts sur la page d'accueil
+paginate: 5
+paginate_path: /page:num/
 
 # Fuseau horaire
 timezone: Europe/Paris
@@ -33,19 +41,26 @@ timezone: Europe/Paris
 include:
   - _pages
 
-# Plugins supportés par GitHub Pages (sécurisé)
+# Plugins (doivent correspondre à ceux fournis par GitHub Pages + doc Minimal Mistakes)
 plugins:
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
   - jekyll-gist
   - jemoji
+  - jekyll-include-cache
+
 
 # Auteur
 author:
   name   : "Andile Boussari"
   avatar : "/assets/images/bio-photo.jpg"
-  bio: >
-    Administrateur systèmes & réseaux | Cybersécurité | Passionné de labs & veille technologique.
+  bio: |
+    - Administrateur systèmes & réseaux
+    - Cybersécurité
+    - Passionné de labs & veille technologique.
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -71,6 +86,10 @@ footer:
 
 # Valeurs par défaut
 defaults:
+  - scope:
+      path: ""
+    values:
+      lang: fr
   # Articles (_posts)
   - scope:
       path: ""
@@ -78,9 +97,12 @@ defaults:
     values:
       layout: single
       author_profile: true
+      toc: true
+      toc_sticky: true
       read_time: true
-      comments: false
+      comments: true
       share: false
+      show_date: true
       related: false
 
   # Pages (_pages)
